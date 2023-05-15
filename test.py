@@ -1,5 +1,3 @@
-import pandas
-import numpy as np
 import typing
 
 print (typing.List)
