@@ -13,4 +13,3 @@ repos:
     rev: 'v0.0.267'
     hooks:
       - id: ruff
-
