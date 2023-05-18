@@ -1,13 +1,12 @@
-from typing import Tuple
-from typing import List
+from typing import List 
+from typing import List 
+
+import os
+import os
 
 
-def add_numbers(numbers: List[int]) -> int:
-    return sum(numbers)
+def sum_even_numbers(numbers: List[int]) -> int:
+    """Given a list of integers, return the sum of all even numbers in the list."""
+    return sum(num for num in numbers if num % 2 == 0)
 
-
-def get_user_info() -> Tuple[str, int, str]:
-    name = "Alice"
-    age = 30
-    occupation = "Engineer"
-    return (name, age, occupation)
+os.rename
