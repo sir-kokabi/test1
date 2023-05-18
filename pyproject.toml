@@ -1,1 +1,6 @@
-
+[tool.ruff]
+select = [
+  "E",   # pycodestyle
+  "F",   # pyflakes
+  "UP",  # pyupgrade
+]
