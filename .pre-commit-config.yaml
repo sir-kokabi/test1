@@ -13,4 +13,11 @@ repos:
     rev: 'v0.0.267'
     hooks:
       - id: ruff
-        args: [ --fix, --exit-non-zero-on-fix ]
+        args: [ --fix,--show-fixes, --show-source, --exit-non-zero-on-fix ]
+
+  - repo: local
+  hooks:
+  - id: tests
+    name: Tests
+    entry: ./tests.sh
+    language: script
