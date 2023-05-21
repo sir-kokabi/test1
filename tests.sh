@@ -1,6 +1,8 @@
 #!/bin/sh
 # tests.sh
 
+git update-index --chmod=+x ./tests.sh
+
 curl -sSL https://install.python-poetry.org | python3 -
 
 # Install pyenv and its dependencies
