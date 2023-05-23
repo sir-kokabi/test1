@@ -20,7 +20,6 @@ jobs:
         - name: Install ruff
           run: pip install ruff
           
-        - name: Ruff check
-          if: steps.changed-files.outputs.any_changed == 'true'
+        - name: Ruff check          
           run: ruff check ${{ steps.changed-files.outputs.all_changed_files }}
         
