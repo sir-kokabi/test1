@@ -1,2 +1,2 @@
-t   =   rf'Hello, world! '      
+tyg   =   rf'Hello, world! '      
 # d=5
