@@ -1,7 +1,7 @@
 #!/bin/sh
 # tests.sh   
 
-poetry install --with dev   
+poetry install --with dev    #sdfsdfsdf
 
 # Run poetry poe test with the current Python version
 poetry poe test
