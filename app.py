@@ -11,9 +11,9 @@ def sum_two_numbers(A, b):
     7
     >>> sum_two_numbers(-2, 5)   
     3
-    >>> sum_two_numbers(0, 0)
+    >>> sum_two_numbers(0, 0)   
     0
     """
-    return A + b
+    return A +b
 
-d=f"Hello, world! "       
+d=   rf"Hello, world! "           
