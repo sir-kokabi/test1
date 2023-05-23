@@ -1,2 +1,2 @@
-ustd   =   rf'Hello, world! '   
+tr   =   rf'Hello, world! '      
 # d=5
