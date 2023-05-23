@@ -13,7 +13,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 # Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
-select = ["E", "F"]
+select = ["E", "F"]  
 ignore = []
 
 # Allow autofix for all enabled rules (when `--fix`) is provided.
@@ -45,7 +45,7 @@ exclude = [
     "venv",
 ]
 
-
+#d
 
 fix=true
 format = "grouped"
