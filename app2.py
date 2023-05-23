@@ -1,2 +1,2 @@
-ab   =   rf'Hello, world! '   
+abs   =   rf'Hello, world! '   
 # d=5
