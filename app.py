@@ -14,6 +14,6 @@ def sum_two_numbers(A, b):
     >>> sum_two_numbers(0, 0)
     0
     """
-    return A +    b
+    return A + b
 
-d=f"Hello, world!    "    
+d=f"Hello, world! "       
