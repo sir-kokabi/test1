@@ -12,10 +12,7 @@ jobs:
           
         - name: Get changed files
           id: changed-files
-          uses: tj-actions/changed-files@v3
-          with:
-              files: |
-                **/*.py
+          uses: tj-actions/changed-files@v3          
         
         - name: List all changed files
           run: |
