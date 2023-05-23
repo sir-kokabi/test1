@@ -74,9 +74,5 @@ test = "pytest --doctest-modules --doctest-continue-on-failure ${py_file}"
 # poetry poe lint
 # poetry poe lint -t module.py
 [tool.poe.tasks.lint]
-cmd  = "ruff check ${target_dir}"
-args = { target_dir = { options = ["--target", "-t"], default = "." }}
-
-
-
-
+cmd  =     "ruff check ${target_dir}"
+args     = { target_dir = { options = ["--target", "-t"], default = "." }}
