@@ -1,5 +1,5 @@
 #!/bin/sh
-# tests.sh
+# testddds.sh
 
 poetry install --with dev  
 
