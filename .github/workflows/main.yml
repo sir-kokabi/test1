@@ -10,14 +10,10 @@ jobs:
           
         - name: Get changed files
           id: changed-files
-          uses: tj-actions/changed-files@v3
-          
-        - name: Upgrade pip
-          run: pip install --upgrade pip
-          
-        - name: Install ruff
-          run: pip install ruff
-          
-        - name: Ruff check
-          if: steps.changed-files.outputs.files_changed == 'true'
-          run: ruff check ${{ steps.changed-files.outputs.all_changed_files }}
+          uses: jitterbit/get-changed-files@v1          
+        - run: |
+              for changed_file in ${{ steps.changed-files.outputs.all }}; do
+              echo "Do something with this ${changed_file}."
+              done
+  
+        
