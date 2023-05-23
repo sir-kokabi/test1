@@ -1,0 +1,19 @@
+name: Run lints
+on:
+    workflow_dispatch:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout master
+          uses: actions/checkout@v3
+          
+        - name: Get changed files
+          id: changed-files
+          uses: jitterbit/get-changed-files@v1          
+        - run: |
+              for changed_file in ${{ steps.changed-files.outputs.all }}; do
+              echo "Do something with this ${changed_file}."
+              done
+  
+        
