@@ -7,13 +7,13 @@ def sum_two_numbers(A, b):
 
     Examples:
 
-    >>> sum_two_numbers(3, 4)
+    >>> sum_two_numbers(3, 4)    
     7
-    >>> sum_two_numbers(-2, 5)
+    >>> sum_two_numbers(-2, 5)   
     3
     >>> sum_two_numbers(0, 0)
     0
     """
-    return A + b
+    return A +    b
 
-d=f"Hello, world! "
+d=f"Hello, world!    "    
