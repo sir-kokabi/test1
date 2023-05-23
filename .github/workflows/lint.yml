@@ -22,3 +22,10 @@ jobs:
           
         - name: Ruff check          
           run: ruff check ${{ steps.changed-files.outputs.all_changed_files }}
+          
+        - name: Push back changes
+          uses: stefanzweifel/git-auto-commit-action@v4
+          with:
+            commit_message: "fix linting warning"
+            commit_user_name: "linter-bot"
+            commit_user_email: "linter-bot@users.noreply.github.com"
