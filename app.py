@@ -1,10 +1,6 @@
 from typing import List
 
-
-
-
-
-def sum_two_numbers(a, b):                           
+def sum_two_numbers(A, b):                                 
     
     
     """Return the sum of two numbers.
@@ -18,6 +14,6 @@ def sum_two_numbers(a, b):
     >>> sum_two_numbers(0, 0)
     0
     """
-    return a + b
+    return A + b
 
 d=f"Hello, world! "
