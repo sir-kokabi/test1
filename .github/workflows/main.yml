@@ -12,7 +12,7 @@ jobs:
           uses: tj-actions/changed-files@v3
           
         - run: |
-            for changed_file in ${{ steps.changed-files.outputs.all }}; do
+            for changed_file in ${{ steps.changed-files.outputs.all_changed_files }}; do
               echo "Do something with this ${changed_file}."
             done
         
