@@ -1,11 +1,6 @@
 name: Run lints
 on:
     workflow_dispatch:
-    push:
-        branches: [master]
-        paths: ["**.py"]
-    pull_request:
-        branches: [master]
 jobs:
   lint:
     runs-on: ubuntu-latest
