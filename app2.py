@@ -1,4 +1,4 @@
-e   =   rf'Hello, world! '            
+e   =   rf'Hello, world! '      
 adfd   =   rf'Hello, world! '   
 a   =   rf'Hello, world! '   
 # d=5
