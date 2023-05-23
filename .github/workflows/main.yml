@@ -2,7 +2,6 @@ name: Run lints
 on:
     pull_request:
         branches: [main]
-        paths: ["**.py"]
 jobs:
   lint:
     runs-on: ubuntu-latest
