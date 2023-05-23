@@ -1,2 +1,2 @@
-u   =   rf'Hello, world! '   
+us   =   rf'Hello, world! '   
 # d=5
