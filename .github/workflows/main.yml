@@ -1,5 +1,11 @@
 name: Run lints
-on: push
+on:
+    workflow_dispatch:
+    push:
+        branches: [master]
+        paths: ["**.py"]
+    pull_request:
+        branches: [master]
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -9,10 +15,10 @@ jobs:
           
         - name: Get changed files
           id: changed-files
-          uses: jitterbit/get-changed-files@v1          
+          uses: tj-actions/changed-files@v3
+          
         - run: |
-              for changed_file in ${{ steps.changed-files.outputs.all }}; do
-              echo "Do something with this ${changed_file}."
-              done
-  
+            for changed_file in ${{ steps.changed-files.outputs.all }}; do
+            echo "Do something with this ${changed_file}."
+            done
         
