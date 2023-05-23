@@ -1,7 +1,5 @@
 name: Run lints
-on:
-  pull_request:
-    types: [opened, reopened]
+on: push
 jobs:
   lint:
     runs-on: ubuntu-latest
