@@ -12,7 +12,7 @@ jobs:
           uses: tj-actions/changed-files@v35
           with:
             files: |
-              **/*.py
+              \.py$
           
         - name: Upgrade pip
           run: pip install --upgrade pip
