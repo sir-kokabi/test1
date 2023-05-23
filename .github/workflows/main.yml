@@ -13,6 +13,6 @@ jobs:
           
         - run: |
             for changed_file in ${{ steps.changed-files.outputs.all }}; do
-            echo "Do something with this ${changed_file}."
+              echo "Do something with this ${changed_file}."
             done
         
