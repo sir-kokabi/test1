@@ -1,5 +1,5 @@
 #!/bin/sh
-# tefdffddddff  sfsd   sdffff
+# tefdffdeeedddff  sfsd   sdffff
 
 poetry install --with dev    #sdfsdfsdffdfdfdfdfd
 
