@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       any_changed: ${{ steps.changed-files.outputs.any_changed }}
+      all_changed_files: ${{ steps.changed-files.outputs.all_changed_files }}
     steps:
         - name: Checkout master
           uses: actions/checkout@v3
@@ -28,7 +29,7 @@ jobs:
           run: pip install ruff
           
         - name: Ruff check and fix
-          run: ruff check ${{ steps.changed-files.outputs.all_changed_files }}
+          run: ruff check ${{ needs.check-changes.outputs.all_changed_files }}
           
         - name: Push back changes
           uses: stefanzweifel/git-auto-commit-action@v4
