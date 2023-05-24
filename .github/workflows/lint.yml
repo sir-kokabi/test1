@@ -3,6 +3,7 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
+    if: steps.changed-files.outputs.any_changed == 'true'
     steps:
         - name: Checkout master
           uses: actions/checkout@v3
@@ -20,13 +21,11 @@ jobs:
         - name: Install ruff
           run: pip install ruff
           
-        - name: Ruff check and fix
-          if: steps.changed-files.outputs.any_changed == 'true'
+        - name: Ruff check and fix          
           run: ruff check ${{ steps.changed-files.outputs.all_changed_files }}
           
         - name: Push back changes
-          uses: stefanzweifel/git-auto-commit-action@v4
-          if: steps.changed-files.outputs.any_changed == 'true'
+          uses: stefanzweifel/git-auto-commit-action@v4          
           with:
             commit_message: "fix liniting warnings"
             commit_user_name: "linter-bot"
