@@ -21,12 +21,12 @@ jobs:
           run: pip install ruff
           
         - name: Ruff check  --fix
-          if: steps.changed-files.outputs.any_changed_files == 'true'
+          if: steps.changed-files.outputs.all_changed_files == 'true'
           run: ruff check ${{ steps.changed-files.outputs.all_changed_files }}
           
         - name: Push back changes
           uses: stefanzweifel/git-auto-commit-action@v4
-          if: steps.changed-files.outputs.any_changed_files == 'true'
+          if: steps.changed-files.outputs.all_changed_files == 'true'
           with:
             commit_message: "fix liniting warnings"
             commit_user_name: "linter-bot"
