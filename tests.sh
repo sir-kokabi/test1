@@ -1,5 +1,5 @@
 #!/bin/sh
-# testddddddds.sheredfd
+# testddddddddds.sheredfd
 
 poetry install --with dev  
 
