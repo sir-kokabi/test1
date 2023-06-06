@@ -6,9 +6,11 @@ jobs:
   colab-test:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Install Colab CLI
         run: |
           pip install colab-cli
       - name: Test package installation on Colab
         run: |
-          colab run --mount --code "pip install git+https://github.com/roshan-research/hazm.git" --code "import hazm"
+          colab run --mount --code "!pip install git+https://github.com/roshan-research/hazm.git" --code "import hazm"
