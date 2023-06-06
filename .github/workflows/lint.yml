@@ -10,7 +10,14 @@ jobs:
         uses: actions/checkout@v2
       - name: Install Colab CLI
         run: |
-          pip install colab-cli
+          pip3.8 install colab-cli
+      - name: Debug Colab CLI
+        run: |
+          pip show colab-cli
+          echo $PATH
+      - name: Export PATH
+        run: |
+          export PATH=$PATH:/home/runner/.local/bin
       - name: Test package installation on Colab
         run: |
-          colab run --mount --code "!pip install git+https://github.com/roshan-research/hazm.git" --code "import hazm"
+          colab run --mount --code "pip install git+https://github.com/roshan-research/hazm.git" --code "import hazm"
