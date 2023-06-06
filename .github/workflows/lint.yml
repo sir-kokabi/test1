@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Install Colab CLI
         run: |
-          pip3.8 install colab-cli
+          pip install colab-cli
       - name: Debug Colab CLI
         run: |
           pip show colab-cli
