@@ -1,10 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Caveat';
+    src: url('url:~assets/Caveat.ttf') format('truetype');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
 * {
-    font-family: "Caveat" !important;
+    font-family: 'Caveat' !important;
     color: red;
 }
