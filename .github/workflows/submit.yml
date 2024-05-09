@@ -1,34 +1,18 @@
-name: "Submit to Web Store"
+name: Request URL and Show Status Code
+
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  request-url:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Cache pnpm modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-
-      - uses: pnpm/action-setup@v2.2.4
-        with:
-          version: latest
-          run_install: true
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v3.4.1
-        with:
-          node-version: 16.x
-          cache: "pnpm"
-      - name: Build the extension
-        run: pnpm build
-      - name: Package the extension into a zip artifact
-        run: pnpm package
-      - name: Browser Platform Publish
-        uses: PlasmoHQ/bpp@v3
-        with:
-          keys: ${{ secrets.SUBMIT_KEYS }}
-          artifact: build/chrome-mv3-prod.zip
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Request URL
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://book.icfi.ir/book/39283/%D8%B3%D8%B1%D8%B4%D8%AA-%D9%87%D9%88%D8%B4-%D9%88-%D9%85%D8%B4%DA%A9%D9%84%D8%A7%D8%AA-%D8%B1%D9%81%D8%AA%D8%A7%D8%B1%DB%8C?paginatedParams=page%3D11%26size%3D12%26exhibitorId%3D318)
+          echo "Status code: $STATUS"
