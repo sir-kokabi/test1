@@ -1,0 +1,19 @@
+{
+  "name": "Noi Mode",
+  "version": "0.1.9",
+  "sync": "https://github.com/sir-kokabi/test1/blob/main/noi.mode.json",
+  "modes": [   
+    {
+      "id": "noi:chatgpt",
+      "parent": "noi@ai",
+      "text": "ChatGPT",
+      "url": "https://chatgpt.com"
+    },
+    {
+      "id": "noi:claude",
+      "parent": "noi@ai",
+      "text": "Claude",
+      "url": "https://claude.ai"
+    },
+  ]
+}
